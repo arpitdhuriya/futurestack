@@ -71,8 +71,8 @@ function App() {
     },
     {
       icon: <Briefcase className="w-8 h-8 text-indigo-400" />,
-      title: "Paid Experience",
-      description: "Earn while you learn - get compensated for your contributions"
+      title: "Real world Interaction",
+      description: "Lead the way with other contributors"
     },
     {
       icon: <Award className="w-8 h-8 text-orange-400" />,
