@@ -21,6 +21,7 @@ import {
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('monthly');
+  const [activeTab, setActiveTab] = useState('weekly');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -103,7 +104,7 @@ function App() {
   const pricingPlans = [
     {
       name: "Starter",
-      price: { monthly: 99, yearly: 89 },
+      price: { weekly: 300, monthly: 1200 },
       features: [
         "Basic mentorship (2 hours/week)",
         "Access to learning resources",
@@ -115,7 +116,7 @@ function App() {
     },
     {
       name: "Professional",
-      price: { monthly: 199, yearly: 179 },
+      price: { weekly: 500, monthly: 2000 },
       features: [
         "Intensive mentorship (5 hours/week)",
         "Real project development",
@@ -128,17 +129,17 @@ function App() {
       popular: true
     },
     {
-      name: "Enterprise",
-      price: { monthly: 299, yearly: 269 },
+      name: "College",
+      price: { weekly: "Contact", monthly: "Contact" },
       features: [
-        "Full mentorship (8 hours/week)",
-        "Lead complex projects",
-        "Direct industry connections",
-        "Interview preparation",
-        "Job placement assistance",
-        "Custom learning path",
-        "24/7 support",
-        "Higher project payments"
+        "Bulk enrollment discounts",
+        "Custom curriculum design",
+        "Dedicated program manager",
+        "Institution-wide mentorship",
+        "Faculty training programs",
+        "Progress tracking dashboard",
+        "Flexible payment terms",
+        "Volume-based pricing"
       ],
       popular: false
     }
@@ -424,17 +425,17 @@ function App() {
             </p>
             
             <div className="flex items-center justify-center mb-8">
-              <span className={`mr-3 ${activeTab === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
+              <span className={`mr-3 ${activeTab === 'weekly' ? 'text-white' : 'text-gray-400'}`}>Weekly</span>
               <button
-                onClick={() => setActiveTab(activeTab === 'monthly' ? 'yearly' : 'monthly')}
+                onClick={() => setActiveTab(activeTab === 'weekly' ? 'monthly' : 'weekly')}
                 className="relative w-14 h-8 bg-blue-500 rounded-full transition-colors"
               >
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full shadow-md transition-transform ${
-                  activeTab === 'yearly' ? 'translate-x-7' : 'translate-x-1'
+                  activeTab === 'monthly' ? 'translate-x-7' : 'translate-x-1'
                 }`}></div>
               </button>
-              <span className={`ml-3 ${activeTab === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
-                Yearly <span className="text-green-400 text-sm">(Save 10%)</span>
+              <span className={`ml-3 ${activeTab === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
+                Monthly <span className="text-green-400 text-sm">(4 weeks)</span>
               </span>
             </div>
           </div>
@@ -455,10 +456,19 @@ function App() {
                 <div className="p-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">
-                      ₹{plan.price[activeTab]}
-                    </span>
-                    <span className="text-gray-400">/{activeTab === 'monthly' ? 'month' : 'year'}</span>
+                    {plan.price[activeTab] === "Contact" ? (
+                      <div>
+                        <span className="text-3xl font-bold text-blue-400">Contact for Deal</span>
+                        <div className="text-gray-400 text-sm mt-2">Custom pricing available</div>
+                      </div>
+                    ) : (
+                      <div>
+                        <span className="text-4xl font-bold text-white">
+                          ₹{plan.price[activeTab]}
+                        </span>
+                        <span className="text-gray-400">/{activeTab === 'weekly' ? 'week' : 'month'}</span>
+                      </div>
+                    )}
                   </div>
                   
                   <ul className="space-y-3 mb-8">
@@ -475,7 +485,7 @@ function App() {
                       ? 'bg-blue-500 text-white hover:bg-blue-600' 
                       : 'bg-gray-700 text-white hover:bg-gray-600'
                   }`}>
-                    Get Started
+                    {plan.name === 'College' ? 'Contact Us' : 'Get Started'}
                   </button>
                 </div>
               </div>
