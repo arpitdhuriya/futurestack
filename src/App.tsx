@@ -35,6 +35,15 @@ function App() {
       });
     };
 
+    // Make hero content visible immediately
+    const heroElements = document.querySelectorAll('.fade-in.hero');
+    heroElements.forEach(element => {
+      element.classList.add('active');
+    });
+
+    // Trigger initial scroll check for elements already in viewport
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -221,7 +230,7 @@ function App() {
       <section className="relative pt-20 pb-20 bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="fade-in">
+            <div className="fade-in hero">
               <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                 Bridge the Gap Between
                 <span className="text-blue-400"> Academic Learning</span> and
@@ -257,7 +266,7 @@ function App() {
               </div>
             </div>
             
-            <div className="fade-in relative">
+            <div className="fade-in hero relative">
               <div className="bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl p-8 transform rotate-2 hover:rotate-0 transition-transform duration-300">
                 <div className="bg-gray-900 rounded-lg p-4 mb-4 border border-gray-700">
                   <div className="flex items-center space-x-2 mb-3">

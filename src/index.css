@@ -29,6 +29,12 @@ html {
   transform: translateY(0);
 }
 
+/* Ensure hero content is visible immediately */
+.fade-in.hero {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Custom animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(2deg); }
