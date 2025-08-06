@@ -613,8 +613,8 @@ function App() {
               <h3 className="text-lg font-semibold mb-6">Contact</h3>
               <ul className="space-y-3 text-gray-400">
                 <li>Email: hello@devmentor.com</li>
-                <li>Phone: +91 98765 43210</li>
-                <li>Address: Bangalore, India</li>
+                <li>Phone: +91 7077424945</li>
+                <li>Address: Indore, India</li>
               </ul>
             </div>
           </div>
