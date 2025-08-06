@@ -551,7 +551,7 @@ function App() {
           </h2>
           <p className="text-xl text-blue-100 mb-8 leading-relaxed">
             Join hundreds of students who have successfully bridged the gap between 
-            academic learning and industry readiness. Start your paid learning journey today.
+            academic learning and industry readiness. Start your learning journey today.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
