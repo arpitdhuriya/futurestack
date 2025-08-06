@@ -105,7 +105,7 @@ function App() {
     {
       step: "05",
       title: "Portfolio & Payment",
-      description: "Complete your project, build your portfolio, and receive payment for your contributions."
+      description: "Complete your project, build your portfolio."
     }
   ];
 
