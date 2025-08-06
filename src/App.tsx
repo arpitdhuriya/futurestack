@@ -20,7 +20,6 @@ import {
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState('monthly');
   const [activeTab, setActiveTab] = useState('weekly');
 
   useEffect(() => {
