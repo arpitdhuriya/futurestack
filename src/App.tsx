@@ -174,7 +174,7 @@ function App() {
       name: "Arjun Kumar",
       role: "4th Year ECE Student",
       university: "NIT Trichy",
-      content: "Being paid while learning cutting-edge technologies was amazing. The agile environment prepared me for the industry.",
+      content: "Learning cutting-edge technologies was amazing. The agile environment prepared me for the industry.",
       rating: 5,
       image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     }
@@ -260,8 +260,8 @@ function App() {
                   <div className="text-gray-400">Job Placement Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400">₹15k+</div>
-                  <div className="text-gray-400">Average Monthly Earning</div>
+                  <div className="text-3xl font-bold text-green-400">New Cutting Edge+</div>
+                  <div className="text-gray-400">Tech Leader</div>
                 </div>
               </div>
             </div>
@@ -583,7 +583,7 @@ function App() {
                 through expert mentorship and real-world project experience.
               </p>
               <div className="flex space-x-4 mt-6">
-                <Github className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+                <Github className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer transition-colors" /
                 <Linkedin className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
                 <Mail className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
               </div>
